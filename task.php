@@ -72,3 +72,15 @@ function onlyEvenNumbers ($array){
 }
 
 $evenArray = onlyEvenNumbers($filArray);
+
+// Function that takes 2 parameters, Array with ascending sorted numbers and mean variable with a number.
+// Function checks the first number bigger than the mean number
+function firstNumBiggerThanMean ($array, $mean) {
+    foreach ($array as $value){
+        if($value > $mean){
+            return $value;
+        }
+    }
+}
+
+$numBiggerThanMean = firstNumBiggerThanMean($evenArray, $mean);
