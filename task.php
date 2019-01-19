@@ -32,6 +32,20 @@ function numCheck($array) {
 
 // Performed the function and got a filtered array
 $filArray = numCheck($unfilArray);
+asort($filArray);
+
+// This function task is to get sum all values inside the array and divide it with the number of values to get arithmetic mean
+function arithmeticMean($array) {
+    $sum = 0;
+    foreach($array as $value) {
+        $sum += $value;
+    }
+    $divNum = count($array);
+    $mean = $sum / $divNum;
+    return ($mean);
+}
+
+$mean = arithmeticMean($filArray);
 
 
 
