@@ -116,8 +116,10 @@ $numBiggerThanMean = firstNumBiggerThanMean($evenArray, $mean);
 
                     <td style="height: 30px; min-width: 30px; text-align: right" ><?php
 
+                        // Checking current position of cell
                         $numInside = ($i * $tableSize) + $j;
 
+                        // Checking if the number exists in array
                         if(in_array($numInside, $evenArray)) {
 
                             if($numInside != $numBiggerThanMean) {
