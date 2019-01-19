@@ -18,11 +18,17 @@ $unfilString = htmlspecialchars($_POST['num']);
 $unfilArray = explode(',', $unfilString);
 
 // Check every value in array, if it is not a number, remove them and return filtered array
+// After checking if its a number, the function will perform additional check to see if the number is integer (whole number).
 function numCheck($array) {
     $i = 0;
     foreach($array as $value) {
 
         if(!is_numeric($value)) {
+            unset($array[$i]);
+        }
+        $test = floor($value);
+
+        if(($test-$value) != 0) {
             unset($array[$i]);
         }
         $i++;
@@ -32,6 +38,12 @@ function numCheck($array) {
 
 // Performed the function and got a filtered array
 $filArray = numCheck($unfilArray);
+
+if(empty($filArray)){
+    echo "Please fill out the form the correct way in <a href=\"index.html\">Index.html</a>";
+    exit();
+}
+
 asort($filArray);
 
 // This function task is to get sum all values inside the array and divide it with the number of values to get arithmetic mean
@@ -81,6 +93,7 @@ function firstNumBiggerThanMean ($array, $mean) {
             return $value;
         }
     }
+    return false;
 }
 
 $numBiggerThanMean = firstNumBiggerThanMean($evenArray, $mean);
