@@ -107,22 +107,36 @@ $numBiggerThanMean = firstNumBiggerThanMean($evenArray, $mean);
 
     <tbody><?php
 
-    // $i represents rows in table, $j represents cell
-    for($i = 0; $i <= $tableSize; $i++) {?>
+        // $i represents rows in table, $j represents cell
+        for($i = 0; $i <=$tableSize; $i++) {?>
 
-        <tr><?php
+            <tr><?php
 
-            for($j = 0; $j <=$tableSize; $j++) {?>
+                for($j = 0; $j <=$tableSize; $j++) {?>
 
-                <td><?php
-                  
-                    ?>
-                </td><?php
+                    <td style="height: 30px; min-width: 30px; text-align: right" ><?php
 
-            }?>
+                        $numInside = ($i * $tableSize) + $j;
 
-        </tr><?php
+                        if(in_array($numInside, $evenArray)) {
 
-    }?>
+                            if($numInside != $numBiggerThanMean) {
+
+                                echo $numInside;
+
+                            } else {
+
+                                echo "<strong>" . $numInside . "</strong>";
+                            }
+
+                        }?>
+
+                    </td><?php
+
+                }?>
+
+            </tr><?php
+
+        }?>
     </tbody>
 </table>
