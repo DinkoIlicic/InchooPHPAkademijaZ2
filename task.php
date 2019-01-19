@@ -57,4 +57,18 @@ function tableSize ($array) {
     return $size;
 }
 
+$tableSize = tableSize($filArray);
 
+// This function creates new Array with only even numbers
+function onlyEvenNumbers ($array){
+    $newArray = [];
+    foreach($array as $value) {
+        if($value % 2 !== 0) {
+            continue;
+        }
+        array_push($newArray, $value);
+    }
+    return $newArray;
+}
+
+$evenArray = onlyEvenNumbers($filArray);
