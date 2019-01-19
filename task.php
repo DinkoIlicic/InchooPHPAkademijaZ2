@@ -25,6 +25,7 @@ function numCheck($array) {
 
         if(!is_numeric($value)) {
             unset($array[$i]);
+            continue;
         }
         $test = floor($value);
 
