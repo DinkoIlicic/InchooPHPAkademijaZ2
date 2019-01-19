@@ -84,3 +84,7 @@ function firstNumBiggerThanMean ($array, $mean) {
 }
 
 $numBiggerThanMean = firstNumBiggerThanMean($evenArray, $mean);
+
+// Creating table with size according to squared size of $tableSize^2.
+// Table will take numbers from $evenArray and put them in according position from left up to right down order.
+// The first bigger number than mean will be bolded. The number is hold in $numBiggerThanMean.
