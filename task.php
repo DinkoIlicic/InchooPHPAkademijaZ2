@@ -40,7 +40,7 @@ function numCheck($array) {
 }
 
 // Performed the function and got a filtered array
-var_dump($filArray = numCheck($unfilArray));
+$filArray = numCheck($unfilArray);
 
 if(empty($filArray)){
     echo "Please fill out the form the correct way in <a href=\"index.html\">Index.html</a>";
