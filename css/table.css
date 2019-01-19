@@ -1,0 +1,9 @@
+#table1 {
+    border: 1px solid black;
+}
+
+#td1 {
+    height: 30px;
+    width: 30px;
+    text-align: right;
+}
