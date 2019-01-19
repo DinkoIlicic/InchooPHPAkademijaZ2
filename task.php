@@ -104,9 +104,14 @@ $numBiggerThanMean = firstNumBiggerThanMean($evenArray, $mean);
 // Creating table with size according to squared size of $tableSize^2.
 // Table will take numbers from $evenArray and put them in according position from left up to right down order.
 // The first bigger number than mean will be bolded. The number is hold in $numBiggerThanMean.
+// Adding css file here for designing the table
 
 ?>
-<table border="1">
+<style><?php
+include_once('css/table.css');?>
+</style>
+
+<table>
 
     <tbody><?php
 
@@ -117,7 +122,7 @@ $numBiggerThanMean = firstNumBiggerThanMean($evenArray, $mean);
 
                 for($j = 0; $j < $tableSize; $j++) {?>
 
-                    <td style="height: 30px; min-width: 30px; text-align: right" ><?php
+                    <td><?php
 
                         // Checking current position of cell
                         $numInside = ($i * $tableSize) + $j + 1;
