@@ -111,11 +111,11 @@ $numBiggerThanMean = firstNumBiggerThanMean($evenArray, $mean);
     <tbody><?php
 
         // $i represents rows in table, $j represents cell
-        for($i = 0; $i <=$tableSize; $i++) {?>
+        for($i = 0; $i < $tableSize; $i++) {?>
 
             <tr><?php
 
-                for($j = 0; $j <=$tableSize; $j++) {?>
+                for($j = 0; $j < $tableSize; $j++) {?>
 
                     <td style="height: 30px; min-width: 30px; text-align: right" ><?php
 
