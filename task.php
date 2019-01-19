@@ -6,6 +6,25 @@
  * Time: 11:37
  */
 
-$unfilArray = $_POST['num'];
+$unfilString = $_POST['num'];
 
-var_dump($unfilArray);
+$unfilArray = explode(',', $unfilString);
+var_dump ($unfilArray);
+echo "<hr />";
+
+function numCheck($array) {
+    $i = 0;
+    foreach($array as $value) {
+
+        if(!is_numeric($value)) {
+            unset($array[$i]);
+        }
+        $i++;
+    }
+    return ($array);
+}
+
+$filArray = numCheck($unfilArray);
+var_dump($filArray);
+
+
