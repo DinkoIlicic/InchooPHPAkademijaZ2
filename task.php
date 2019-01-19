@@ -16,6 +16,7 @@ $unfilString = htmlspecialchars($_POST['num']);
 
 // Explode string into pieces and add them to unfiltered array
 $unfilArray = explode(',', $unfilString);
+$unfilArray = array_filter($unfilArray);
 
 // Check every value in array, if it is not a number, remove them and return filtered array
 // After checking if its a number, the function will perform additional check to see if the number is integer (whole number).
@@ -39,7 +40,7 @@ function numCheck($array) {
 }
 
 // Performed the function and got a filtered array
-$filArray = numCheck($unfilArray);
+var_dump($filArray = numCheck($unfilArray));
 
 if(empty($filArray)){
     echo "Please fill out the form the correct way in <a href=\"index.html\">Index.html</a>";
