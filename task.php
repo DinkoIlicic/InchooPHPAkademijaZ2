@@ -47,6 +47,8 @@ function arithmeticMean($array) {
 
 $mean = arithmeticMean($filArray);
 
+// This function takes the array, checks biggest number, squares it with 2, rounds the square to lower int number.
+// To get the size, we add +1 and return the number for our table
 function tableSize ($array) {
     $maxNum = max($array);
     $sqrt = sqrt($maxNum);
