@@ -6,3 +6,6 @@
  * Time: 11:37
  */
 
+$unfilArray = $_POST['num'];
+
+var_dump($unfilArray);
