@@ -11,12 +11,13 @@ if(empty($_POST['num'])){
     exit();
 }
 
+// Convert special characters to HTML entities to avoid potential problems
 $unfilString = htmlspecialchars($_POST['num']);
 
+// Explode string into pieces and add them to unfiltered array
 $unfilArray = explode(',', $unfilString);
-var_dump ($unfilArray);
-echo "<hr />";
 
+// Check every value in array, if it is not a number, remove them and return filtered array
 function numCheck($array) {
     $i = 0;
     foreach($array as $value) {
@@ -29,7 +30,8 @@ function numCheck($array) {
     return ($array);
 }
 
+// Performed the function and got a filtered array
 $filArray = numCheck($unfilArray);
-var_dump($filArray);
+
 
 
