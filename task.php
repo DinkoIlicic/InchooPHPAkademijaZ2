@@ -6,7 +6,12 @@
  * Time: 11:37
  */
 
-$unfilString = $_POST['num'];
+if(empty($_POST['num'])){
+    echo "Please fill out the form in <a href=\"index.html\">Index.html</a>";
+    exit();
+}
+
+$unfilString = htmlspecialchars($_POST['num']);
 
 $unfilArray = explode(',', $unfilString);
 var_dump ($unfilArray);
