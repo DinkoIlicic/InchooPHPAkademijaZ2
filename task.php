@@ -47,5 +47,12 @@ function arithmeticMean($array) {
 
 $mean = arithmeticMean($filArray);
 
+function tableSize ($array) {
+    $maxNum = max($array);
+    $sqrt = sqrt($maxNum);
+    $roundNum = floor($sqrt);
+    $size = $roundNum + 1;
+    return $size;
+}
 
 
